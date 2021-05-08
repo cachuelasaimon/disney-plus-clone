@@ -1,0 +1,52 @@
+:root {
+  --dark-background-color: #040714;
+  --light-text-color: #f9f9f9;
+}
+
+@font-face {
+  font-family: Avenir-Roman;
+  src: url("assets/fonts/avenir-roman.otf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  font-family: "Avenir-Roman";
+}
+
+body {
+  background-color: var(--dark-background-color);
+  color: var(--light-text-color);
+  font-family: "Avenir-Roman";
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: var(--light-text-color);
+  text-decoration: none;
+}
+
+/*  Media Queries */
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  body {
+    font-size: 14px;
+  }
+}
