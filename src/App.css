@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --dark-background-color: #040714;
+  --light-text-color: #f9f9f9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@font-face {
+  font-family: Avenir-Roman;
+  src: url("assets/fonts/avenir-roman.otf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  font-family: "Avenir-Roman";
+}
+
+body {
+  background-color: var(--dark-background-color);
+  color: var(--light-text-color);
+  font-family: "Avenir-Roman";
+}
+a {
+  color: var(--light-text-color);
+  text-decoration: none;
+}
+
+/*  Media Queries */
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  body {
+    font-size: 15px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 479px) {
+  body {
+    font-size: 14px;
   }
 }
