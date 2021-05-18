@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import { useHistory } from "react-router-dom";
+
+// REDUX //
+import { useDispatch, useSelector } from "react-redux";
+import { checkUserSession } from "../redux/actions";
+const mapState = ({ auth }) => ({
+  currentUser: auth.currentUser,
+});
 
 export default function Login(props) {
+  const { currentUser } = useSelector(mapState);
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  useEffect(() => {
+    dispatch(checkUserSession());
+  }, []);
+
+  useEffect(() => {
+    if (currentUser) {
+      history.push("/home");
+    }
+  }, [currentUser]);
+
   return (
     <Container>
       <Content>

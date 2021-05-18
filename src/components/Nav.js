@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 // Material UI //
 import { Home, Search, Add, Star, Movie, LiveTv } from "@material-ui/icons";
 
 // REDUX //
-import { checkUserSession, loginStart, logoutStart } from "../redux/actions";
+import { loginStart, logoutStart } from "../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 const mapState = ({ auth }) => ({
   currentUser: auth.currentUser,
@@ -30,14 +30,7 @@ export default function Navbar(props) {
 
   useEffect(() => {
     setActiveBtn("home");
-    dispatch(checkUserSession());
   }, []);
-
-  useEffect(() => {
-    if (currentUser) {
-      history.push("/home");
-    }
-  }, [currentUser]);
 
   const handleLogin = () => {
     dispatch(loginStart());

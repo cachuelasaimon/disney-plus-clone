@@ -117,7 +117,9 @@ const ButtonGrid = styled.div`
   flex-direction: row;
 
   .play-btn {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     background: #f9f9f9;
     border: 1px solid #f9f9f9;
     font-weight: bold;
@@ -130,7 +132,9 @@ const ButtonGrid = styled.div`
   }
 
   .trailer-btn {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     background-color: rgba(0, 0, 0, 0.3);
     color: #f9f9f9;
     border: 1px solid #f9f9f9;
@@ -143,7 +147,7 @@ const ButtonGrid = styled.div`
   }
 
   .icon-btn {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
     border: 1.5px solid #f9f9f9;
     color: #f9f9f9;
     background-color: rgba(0, 0, 0, 0.3);
